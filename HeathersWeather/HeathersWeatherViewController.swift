@@ -10,6 +10,8 @@ import UIKit
 
 class HeathersWeatherViewController: UIViewController, WeatherAPIControllerProtocol
 {
+    
+    
     var api: WeatherAPIController!
     
     
@@ -18,7 +20,15 @@ class HeathersWeatherViewController: UIViewController, WeatherAPIControllerProto
         super.viewDidLoad()
 
         api = WeatherAPIController(delegate: self)
-        api.searchDarkSkyFor("")
+      //  api.searchDarkSkyFor("latitude")
+        
+        api.searchDarkSkyFor(latitude: 27.77006, longitude: -82.63642)
+        
+        
+        
+        
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
 
     override func didReceiveMemoryWarning()
@@ -26,32 +36,26 @@ class HeathersWeatherViewController: UIViewController, WeatherAPIControllerProto
         super.didReceiveMemoryWarning()
       
     }
-
-//MARK: Model Class - API
-    func didReceiveAPIResults(_ results: Dictionary<String, Any>)
-    {
-        let queue = DispatchQueue.main
-        queue.async
-            {
-                self.weatherInfo = Weather.weatherInfoFromDarkSky(results)
-                self.heathersWeatherView.reloadData()
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-        
-    }
- //MARK: Model Class - Weather
     
-    func didReceiveLocationResults(_ results: [Any])
-    {
+    func setLabels(weather: Weather) {
+        self.temperatureLabel.text = String(weather.temperatureMax)
+        self.apparentTemperatureLabel.text = String(weather.temperatureMax)
+    }
 
+
+//MARK: Model Class - Weather
+    
+    func didReceiveAPIResults(_ weather: Weather)
+    {
         let queue = DispatchQueue.main
         queue.async
             {
-
-                self.weatherInfo = Weather.weatherInfoFromDarkSky(results)
-                self.heathersWeatherView.reloadData()
+                Weather.current = weather
+                self.setLabels(weather: weather)
+                
+               // self.heathersWeatherView.reloadData()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
+            }
         
     }
 /*

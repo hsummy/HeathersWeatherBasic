@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E30D34AE1E032BD4007E0191 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D34AD1E032BD4007E0191 /* Location.swift */; };
+		E30D34B01E0331F3007E0191 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30D34AF1E0331F3007E0191 /* Weather.swift */; };
 		E30E2FD11E01BE6D0040DB0D /* WeatherAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30E2FD01E01BE6D0040DB0D /* WeatherAPIController.swift */; };
 		E38A5D2D1E00F74900D8259B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38A5D2C1E00F74900D8259B /* AppDelegate.swift */; };
 		E38A5D321E00F74900D8259B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38A5D301E00F74900D8259B /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E30D34AD1E032BD4007E0191 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		E30D34AF1E0331F3007E0191 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E30E2FD01E01BE6D0040DB0D /* WeatherAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPIController.swift; sourceTree = "<group>"; };
 		E38A5D291E00F74900D8259B /* HeathersWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeathersWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38A5D2C1E00F74900D8259B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,9 +64,11 @@
 			children = (
 				E38A5D2C1E00F74900D8259B /* AppDelegate.swift */,
 				E38A5D301E00F74900D8259B /* Main.storyboard */,
-				E30E2FD01E01BE6D0040DB0D /* WeatherAPIController.swift */,
-				E38A5D401E00FC5300D8259B /* FishViewController.swift */,
 				E38A5D3E1E00F79600D8259B /* HeathersWeatherViewController.swift */,
+				E38A5D401E00FC5300D8259B /* FishViewController.swift */,
+				E30D34AF1E0331F3007E0191 /* Weather.swift */,
+				E30D34AD1E032BD4007E0191 /* Location.swift */,
+				E30E2FD01E01BE6D0040DB0D /* WeatherAPIController.swift */,
 				E38A5D331E00F74900D8259B /* Assets.xcassets */,
 				E38A5D351E00F74900D8259B /* LaunchScreen.storyboard */,
 				E38A5D381E00F74900D8259B /* Info.plist */,
@@ -97,7 +103,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = HSummy;
 				TargetAttributes = {
 					E38A5D281E00F74900D8259B = {
@@ -144,7 +150,9 @@
 			files = (
 				E38A5D411E00FC5300D8259B /* FishViewController.swift in Sources */,
 				E38A5D2D1E00F74900D8259B /* AppDelegate.swift in Sources */,
+				E30D34AE1E032BD4007E0191 /* Location.swift in Sources */,
 				E38A5D3F1E00F79600D8259B /* HeathersWeatherViewController.swift in Sources */,
+				E30D34B01E0331F3007E0191 /* Weather.swift in Sources */,
 				E30E2FD11E01BE6D0040DB0D /* WeatherAPIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +197,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -238,6 +247,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
