@@ -7,26 +7,35 @@
 //
 
 import UIKit
+//import MapKit
+//import CoreLocation
 
 class HeathersWeatherViewController: UIViewController, WeatherAPIControllerProtocol
 {
+    @IBOutlet weak var TodaysTempLabel: UILabel!
+    @IBOutlet weak var FeelsLikeLabel: UILabel!
+   // @IBOutlet weak var LocationTextField: MKMapView!
+    @IBOutlet weak var ActivityTVCell: UITableViewCell!
+  
+
+
     
+//    @IBAction func WhereTo(_ sender: UIButton) {
+//        
+//        }
     
     var api: WeatherAPIController!
-    
+    var weatherInfo = Weather()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        
+ //       Weather = weatherInfo.downloadedWeatherWithJSON()
+        
         api = WeatherAPIController(delegate: self)
-      //  api.searchDarkSkyFor("latitude")
-        
         api.searchDarkSkyFor(latitude: 27.77006, longitude: -82.63642)
-        
-        
-        
-        
+        //let todayTempLabel.text = "hi"
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
@@ -36,36 +45,55 @@ class HeathersWeatherViewController: UIViewController, WeatherAPIControllerProto
         super.didReceiveMemoryWarning()
       
     }
+
     
-    func setLabels(weather: Weather) {
-        self.temperatureLabel.text = String(weather.temperatureMax)
-        self.apparentTemperatureLabel.text = String(weather.temperatureMax)
+//MARK: - UITableView Data Source
+    
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+
+      let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityTVCell", for: indexPath)
+        //let weatherInfo = ActivityTVCell[IndexPath.row]
+      //  self.ActivityTVCell.textLabel = String(weatherInfo.apparentTemperatureMax)
+        return cell
+    }
+    func setLabels(weather: Weather)
+    {
+        self.TodaysTempLabel.text = String(weather.temperatureMax)
+        self.FeelsLikeLabel.text = String(weather.apparentTemperatureMax)
+      // self.moonPhase.text = String(weather.moonPhase)
     }
 
 
 //MARK: Model Class - Weather
     
-    func didReceiveAPIResults(_ weather: Weather)
+    func didReceiveAPIResults(_ weatherInfo: Weather)
     {
         let queue = DispatchQueue.main
         queue.async
             {
-                Weather.current = weather
-                self.setLabels(weather: weather)
+            Weather.current = weatherInfo
+            //self.weatherInfo = Weather.downloadedWeatherWithJSON(weatherInfo)
+            //self.tableView.reloadData()
+            self.setLabels(weather: weatherInfo)
+
+             //   self.heathersWeatherViewController.reloadData()
+
+
                 
-               // self.heathersWeatherView.reloadData()
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
         
     }
-/*
-// MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-*/
 
 }

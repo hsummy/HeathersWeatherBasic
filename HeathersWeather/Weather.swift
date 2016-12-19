@@ -8,33 +8,27 @@
 
 import Foundation
 
+//protocol Weather
+//{
+//    //func didReceiveWeatherInfo(Weather)
+//}
+
 struct Weather
-    //QUESTION: IF ONE OF THE BELOW PIECES OF INFO ARE UNAVAILABLE OR DO NOT APPLY FOR THE WEATHER REQUESTED...HOW DO I ACCOUNT FOR THAT???
+
 {
-    //daily has 3 objects: data, summary, icon...if i had to choose, it would be items below UNDER data (daily temp is done 4AM - 4AM on Dark Sky).
-    var temperatureMax: Int! //daily - data
-    var apparentTemperatureMax: Int! //daily - data
-    var windSpeed: Int? //daily - data
-    var precipProbability: Float? //daily - data
-    var precipType: String? //daily - data
-    var moonPhase: Float! //daily - data
-    var nearestStormDistance: Int? //currently
-    //alerts have 4 objects: description, expires, title, uri...if i had to choose, it would be description.
-    //var alerts: String? //alerts - description
+
+    var temperatureMax: Int!
+    var apparentTemperatureMax: Int!
+    var windSpeed: Int?
+    var precipProbability: Float?
+    var precipType: String?
+    var moonPhase: Float!
+    var nearestStormDistance: Int?
     
     static var current: Weather?
     
     init()
     {
-        
-//        temperatureMax = todayTemp
-//        apparentTemperatureMax = goingToFeelLikeTemp
-//        self.windSpeed = wind
-//        precipProbability = chanceOfRain
-//        precipType = rainSleetSnow
-//        self.moonPhase = moonPhase
-//        self.nearestStormDistance = nearestStormDistance
-        //self.alerts = alertDescription
         
     }
     
@@ -47,7 +41,7 @@ struct Weather
         self.precipType = weatherInDictionary["precipType"] as? String
         self.moonPhase = weatherInDictionary["moonPhase"] as? Float
         self.nearestStormDistance = weatherInDictionary["nearestStormDistance"] as? Int
-        //self.alerts = weatherInDictionary["alerts"] as? String
+      
     }
     
     static func downloadedWeatherWithJSON(_ weatherResults: [String: Any]) -> Weather
