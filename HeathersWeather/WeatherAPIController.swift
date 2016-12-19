@@ -17,7 +17,7 @@ protocol WeatherAPIControllerProtocol
 class WeatherAPIController
 {
     var delegate: WeatherAPIControllerProtocol
-    private var key = "ed416ac9b64bcc02b2b49a6c9bc3a4ce"
+    private var key = ""
     
    init (delegate: WeatherAPIControllerProtocol)
    {
