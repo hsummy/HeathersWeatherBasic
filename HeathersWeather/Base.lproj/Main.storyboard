@@ -43,6 +43,12 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VQI-0E-fge" id="D5M-tD-KdV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Baked Cartoon Fish" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-0s-Uoc">
+                                                    <rect key="frame" x="8" y="0.0" width="89" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -94,33 +100,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Baked Cartoon Fish" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-0s-Uoc">
-                                <rect key="frame" x="8" y="72" width="89" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg9-vr-5aQ">
+                                <rect key="frame" x="116" y="617" width="159" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Remind Me?">
+                                    <color key="titleColor" red="0.81265741589999996" green="0.22150254250000001" blue="0.1756599844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="syb-S1-rFR" kind="show" identifier="RemindMeSegue" id="cl5-BT-5ID"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.76376363255033553" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.22582883742190163" green="0.49749443273167943" blue="0.72301464320000008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.73282605409622192" green="0.8967888355255127" blue="0.76890093088150024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vQr-eT-UVr" firstAttribute="top" secondItem="vor-jh-B9x" secondAttribute="bottom" constant="65" id="0FB-gZ-wgl"/>
                             <constraint firstItem="dL3-1o-YCA" firstAttribute="leading" secondItem="DhQ-GH-83d" secondAttribute="leading" id="2jq-8g-exv"/>
                             <constraint firstItem="2Rd-xM-dYW" firstAttribute="centerX" secondItem="DhQ-GH-83d" secondAttribute="centerX" id="9v1-NA-GmV"/>
                             <constraint firstItem="dL3-1o-YCA" firstAttribute="top" secondItem="bVC-di-KaQ" secondAttribute="bottom" constant="8" id="Ch0-c1-rAO"/>
                             <constraint firstAttribute="trailing" secondItem="vor-jh-B9x" secondAttribute="trailing" constant="80" id="Isz-O5-BNU"/>
+                            <constraint firstItem="Dg9-vr-5aQ" firstAttribute="leading" secondItem="DhQ-GH-83d" secondAttribute="leadingMargin" constant="100" id="KzJ-r5-jSH"/>
                             <constraint firstItem="BPI-0F-A9y" firstAttribute="top" secondItem="dL3-1o-YCA" secondAttribute="bottom" constant="75" id="OBV-tE-GF6"/>
                             <constraint firstItem="bVC-di-KaQ" firstAttribute="leading" secondItem="DhQ-GH-83d" secondAttribute="leading" constant="8" id="OJb-oh-KXJ"/>
                             <constraint firstItem="iev-Ho-8VR" firstAttribute="trailing" secondItem="DhQ-GH-83d" secondAttribute="trailingMargin" constant="8" id="SWi-O5-Sx3"/>
                             <constraint firstItem="vQr-eT-UVr" firstAttribute="width" secondItem="CNx-p6-s5F" secondAttribute="width" id="Spx-Ws-J2B"/>
                             <constraint firstItem="vor-jh-B9x" firstAttribute="top" secondItem="qzW-2L-yqK" secondAttribute="bottom" constant="8" id="TNx-63-D8s"/>
                             <constraint firstItem="dL3-1o-YCA" firstAttribute="top" secondItem="qzW-2L-yqK" secondAttribute="bottom" constant="300" id="TfR-3H-v6c"/>
+                            <constraint firstItem="BPI-0F-A9y" firstAttribute="top" secondItem="Dg9-vr-5aQ" secondAttribute="bottom" constant="20" id="VVb-y5-9fb"/>
                             <constraint firstItem="iev-Ho-8VR" firstAttribute="baseline" secondItem="bVC-di-KaQ" secondAttribute="baseline" id="YJd-62-eRY"/>
                             <constraint firstAttribute="trailing" secondItem="CNx-p6-s5F" secondAttribute="trailing" constant="125" id="cHP-yB-Wgu"/>
                             <constraint firstItem="2Rd-xM-dYW" firstAttribute="top" secondItem="qzW-2L-yqK" secondAttribute="bottom" constant="115" id="hEx-ls-qCQ"/>
                             <constraint firstItem="2Rd-xM-dYW" firstAttribute="width" secondItem="vor-jh-B9x" secondAttribute="width" id="la4-zV-5Km"/>
                             <constraint firstAttribute="trailing" secondItem="dL3-1o-YCA" secondAttribute="trailing" id="nQy-n3-LUa"/>
+                            <constraint firstItem="Dg9-vr-5aQ" firstAttribute="top" secondItem="dL3-1o-YCA" secondAttribute="bottom" constant="25" id="noK-XT-Nd3"/>
                             <constraint firstItem="CNx-p6-s5F" firstAttribute="leading" secondItem="DhQ-GH-83d" secondAttribute="leading" constant="125" id="r0H-7Z-wLy"/>
                             <constraint firstItem="vor-jh-B9x" firstAttribute="leading" secondItem="DhQ-GH-83d" secondAttribute="leading" constant="80" id="r0v-aj-Wn2"/>
                             <constraint firstItem="CNx-p6-s5F" firstAttribute="top" secondItem="vor-jh-B9x" secondAttribute="bottom" constant="10" id="tKy-vW-0ap"/>
+                            <constraint firstAttribute="trailing" secondItem="Dg9-vr-5aQ" secondAttribute="trailing" constant="100" id="uA6-JC-6vF"/>
                             <constraint firstItem="vQr-eT-UVr" firstAttribute="centerX" secondItem="DhQ-GH-83d" secondAttribute="centerX" id="wN1-p4-kQ5"/>
                         </constraints>
                     </view>
@@ -133,6 +149,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mm1-xh-LXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="-182.15892053973016"/>
+        </scene>
+        <!--Remind Me View Controller-->
+        <scene sceneID="GYK-Ks-dcS">
+            <objects>
+                <viewController id="syb-S1-rFR" customClass="RemindMeViewController" customModule="HeathersWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QwC-He-xyA"/>
+                        <viewControllerLayoutGuide type="bottom" id="tvf-9G-q9T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WYK-J6-F0E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What activity do I want to remember?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxY-ie-ksA">
+                                <rect key="frame" x="14" y="76" width="347" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When do I want to do the activity?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhA-8b-IUa">
+                                <rect key="frame" x="14" y="186" width="347" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Ir-27-VLw">
+                                <rect key="frame" x="14" y="107" width="347" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-Pw-Ydn">
+                                <rect key="frame" x="14" y="229" width="347" height="29"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Remind me on this Date"/>
+                                    <segment title="Remind me in this Time"/>
+                                </segments>
+                                <connections>
+                                    <action selector="pickerFormatValueChanged:" destination="syb-S1-rFR" eventType="valueChanged" id="RJ2-FD-q5V"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="GSO-za-CRu">
+                                <rect key="frame" x="14" y="265" width="347" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="506552120.35413003">
+                                    <!--2017-01-19 20:55:20 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="506516400">
+                                    <!--2017-01-19 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2L-ja-Wn5">
+                                <rect key="frame" x="110" y="518" width="155" height="35"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Set Reminder!">
+                                    <color key="titleColor" red="0.81265741589999996" green="0.22150254250000001" blue="0.1756599844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setReminderButtonTapped:" destination="syb-S1-rFR" eventType="touchUpInside" id="SSj-C0-HwD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43683524360153092" green="0.79058022260000005" blue="0.51751684088438488" alpha="0.47333787751677853" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z2L-ja-Wn5" firstAttribute="top" secondItem="GSO-za-CRu" secondAttribute="bottom" constant="37" id="7BC-s6-dFb"/>
+                            <constraint firstItem="8Ir-27-VLw" firstAttribute="trailing" secondItem="LxY-ie-ksA" secondAttribute="trailing" id="CRQ-jW-ir0"/>
+                            <constraint firstItem="HhA-8b-IUa" firstAttribute="top" secondItem="LxY-ie-ksA" secondAttribute="bottom" constant="87" id="EVi-kh-nGi"/>
+                            <constraint firstAttribute="trailing" secondItem="Z2L-ja-Wn5" secondAttribute="trailing" constant="110" id="FTh-jg-GwH"/>
+                            <constraint firstItem="8Ir-27-VLw" firstAttribute="top" secondItem="LxY-ie-ksA" secondAttribute="bottom" constant="8" id="J4m-RX-TpJ"/>
+                            <constraint firstItem="0nH-Pw-Ydn" firstAttribute="leading" secondItem="WYK-J6-F0E" secondAttribute="leading" constant="14" id="Ofq-nV-KYU"/>
+                            <constraint firstItem="LxY-ie-ksA" firstAttribute="centerX" secondItem="WYK-J6-F0E" secondAttribute="centerX" id="RCx-Qe-wfA"/>
+                            <constraint firstItem="GSO-za-CRu" firstAttribute="leading" secondItem="0nH-Pw-Ydn" secondAttribute="leading" id="Rmv-gq-kyT"/>
+                            <constraint firstItem="LxY-ie-ksA" firstAttribute="top" secondItem="QwC-He-xyA" secondAttribute="bottom" constant="12" id="SDX-OO-l0q"/>
+                            <constraint firstAttribute="trailing" secondItem="0nH-Pw-Ydn" secondAttribute="trailing" constant="14" id="TRr-S7-QBk"/>
+                            <constraint firstItem="LxY-ie-ksA" firstAttribute="leading" secondItem="WYK-J6-F0E" secondAttribute="leading" constant="14" id="a86-Jf-Ut1"/>
+                            <constraint firstItem="GSO-za-CRu" firstAttribute="top" secondItem="0nH-Pw-Ydn" secondAttribute="bottom" constant="8" id="bAx-IT-5eY"/>
+                            <constraint firstItem="0nH-Pw-Ydn" firstAttribute="top" secondItem="HhA-8b-IUa" secondAttribute="bottom" constant="20" id="e1U-n6-5wx"/>
+                            <constraint firstItem="GSO-za-CRu" firstAttribute="trailing" secondItem="0nH-Pw-Ydn" secondAttribute="trailing" id="ezz-5a-IiI"/>
+                            <constraint firstItem="8Ir-27-VLw" firstAttribute="leading" secondItem="LxY-ie-ksA" secondAttribute="leading" id="g9l-Kb-YqK"/>
+                            <constraint firstAttribute="trailing" secondItem="HhA-8b-IUa" secondAttribute="trailing" constant="14" id="gLq-hE-HuR"/>
+                            <constraint firstItem="Z2L-ja-Wn5" firstAttribute="leading" secondItem="WYK-J6-F0E" secondAttribute="leading" constant="110" id="nyh-TM-13r"/>
+                            <constraint firstAttribute="trailing" secondItem="LxY-ie-ksA" secondAttribute="trailing" constant="14" id="xJZ-kJ-SwM"/>
+                            <constraint firstItem="HhA-8b-IUa" firstAttribute="leading" secondItem="WYK-J6-F0E" secondAttribute="leading" constant="14" id="z7e-wm-LxM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityReminderTextField" destination="8Ir-27-VLw" id="RWr-q9-41x"/>
+                        <outlet property="datePicker" destination="GSO-za-CRu" id="Qmq-vT-AfO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIg-wQ-Kk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725.5999999999999" y="112.89355322338831"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3cE-NY-SEq">
@@ -161,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qf7-4Y-0Cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1577" y="-541"/>
+            <point key="canvasLocation" x="1726" y="-541"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oJ6-eg-Sl6">
@@ -180,6 +290,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ECw-xZ-cLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-55.200000000000003" y="-182.15892053973016"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6m3-CM-2Mk">
+            <objects>
+                <viewController id="708-gm-tjA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UfO-jn-Ts4"/>
+                        <viewControllerLayoutGuide type="bottom" id="CBO-0f-aGo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tt5-rZ-b7d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBD-0O-v2a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//added UserNotifications for the Reminder feature
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
@@ -15,8 +17,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    {   //adding Notification options to enhance app
+        let center = UNUserNotificationCenter.current()
+        center.getNotificationSettings()
+            {
+            settings in
+            if settings.authorizationStatus == UNAuthorizationStatus.notDetermined
+            {
+                center.requestAuthorization(options: [.alert, .sound, .badge, .carPlay])
+                {
+                    granted, error in
+                    if granted
+                    {
+                        print("Authorization was granted for alerts, sounds, badges, and carplay.")
+                    }
+                    else
+                    {
+                        print("Authorization was denied.")
+                    }
+                }
+            }
+        }
         return true
     }
 
